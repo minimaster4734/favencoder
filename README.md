@@ -2,21 +2,18 @@ FAVencoder (Frame-Accurate Video Encoder) is a comprehensive video processing to
 
 ![Screenshot 1](https://github.com/minimaster4734/favencoder/blob/main/assets/115506.webp)
 
-Installation
+  Installation
 
-Choose the guide for your operating system.
+Choose the guide for your operating system (for Windows, macOS, and Linux)
 
-For Windows, macOS, and Standard Linux Desktops
+  Core Prerequisites
 
-Core Prerequisites
-
-· Python 3.8 or higher.
-· FFmpeg: Must be installed on your system and available in your PATH.
+  · Python 3.8 or higher.
+  · FFmpeg: Must be installed on your system and available in your PATH.
 
 Step 1: Install the System Graphical Dependency (Linux GUI Users Only)
-
-· Windows/macOS: Tkinter is included with the standard Python installer. No action needed.
-· Linux (for GUI mode): You must install the Tk library and its Python bindings at the system level. This is a prerequisite that cannot be installed via pip.
+  · Windows/macOS: Tkinter is included with the standard Python installer. No action needed.
+  · Linux (for GUI mode): You must install the Tk library and its Python bindings at the system level. This is a prerequisite that cannot be installed via pip.
   ```
   # For Debian/Ubuntu:
   sudo apt update && sudo apt install python3-tk
@@ -25,7 +22,6 @@ Step 1: Install the System Graphical Dependency (Linux GUI Users Only)
   ```
 
 Step 2: Set Up an Isolated Python Environment
-
 All subsequent Python packages should be installed inside a virtual environment.
 
 1. Create and activate the environment:
@@ -44,7 +40,6 @@ All subsequent Python packages should be installed inside a virtual environment.
    (Do not use sudo or system package managers for this step.)
 
 Step 3: Install Optional AI Packages (Also via pip)
-
 FAVencoder supports AI-powered video upscaling through two backends:
 
 · CPU Backend (Recommended for testing): Install within your active virtual environment.
@@ -55,10 +50,9 @@ FAVencoder supports AI-powered video upscaling through two backends:
   · No manual installation is required. The program will automatically download the correct version for your operating system the first time you select a GPU AI enhancement option.
   · Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs).
 
-Quick Start Commands
+  Quick Start Commands
 
 Once your environment is set up and activated:
-
 ```
 # Launch the graphical interface (default)
 python favencoder.py
@@ -67,12 +61,9 @@ python favencoder.py --no-gui
 ```
 
 For Android (Termux)
-
 On Termux, all packages can be installed via the pkg manager.
-
 1. Install Termux and All Dependencies
 Install Termux from F-Droid. Then, install all dependencies in one step using pkg:
-
 ```
 # Update the package list and upgrade existing packages
 pkg update && pkg upgrade -y
@@ -83,18 +74,16 @@ pkg install python ffmpeg python-tkinter python-numpy python-pillow python-openc
 
 2. Install the AI Package (CPU Only)
 The only package you should install via pip is the optional CPU-based AI module. Install it globally.
-
 ```
 pip install super-image
 ```
 
-Important Notes for Termux:
+  Important Notes for Termux:
 
 · No GPU Acceleration: The Real-ESRGAN GPU backend is not available on Android/Termux.
 · Storage Access: You may need to grant Termux storage permissions (termux-setup-storage) to access video files outside its home directory.
 
 Quick Start in Termux:
-
 ```
 # Navigate to the directory containing favencoder.py
 python favencoder.py
@@ -104,53 +93,46 @@ Key Features
 
 ![Screenshot 2](https://github.com/minimaster4734/favencoder/blob/main/assets/120849.webp)
 
-🎯 Frame-Accurate Operations
-
+  🎯 Frame-Accurate Operations
 · Precise Frame Selection: Set exact start and end frames for encoding segments
 · Frame-by-Frame Navigation: Navigate with single-frame precision
 · Timeline Control: Visual timeline with direct frame access
 · Frame-Specific Editing: Apply operations to specific frame ranges
 
-🎨 Comprehensive Codec Support
-
+  🎨 Comprehensive Codec Support
 · Video Codecs: FFV1 (Lossless), H.264, H.265, AV1, VP9, ProRes, DNxHD, and hardware-accelerated options (NVENC, QSV, AMF)
 · Audio Codecs: FLAC, PCM, AAC, Opus, MP3, AC3, DTS, Vorbis
 · Custom Encoders: Advanced users can specify any FFmpeg-compatible encoder
 · Intelligent Pairing: Automatic suggestions for optimal video/audio codec combinations
 
-🔍 Visual Editing Tools
-
+  🔍 Visual Editing Tools
 · Interactive Crop Tool: Click-and-drag cropping with visual handles
 · Real-Time Preview: See crop adjustments immediately
 · Aspect Ratio Maintenance: Intelligent cropping that maintains video proportions
 · Crop History: Save and recall custom crop settings
 
-🤖 AI-Powered Enhancement
-
+  🤖 AI-Powered Enhancement
 · Multiple AI Backends: CPU-based (super-image) and GPU-accelerated (Real-ESRGAN)
 · Scale Factors: 2x, 3x, and 4x upscaling
 · Model Specialization: Anime-optimized and general-purpose models
 
-📁 Batch Processing
-
+  📁 Batch Processing
 · Queue Management: Add multiple videos with consistent settings
 · Queue Persistence: Jobs saved between sessions
 · Priority Control: Reorder jobs in the queue
 · Progress Tracking: Real-time status for each job
 · Command Preview: View and edit FFmpeg commands before execution
 
-🖥️ User Interface
-
+  🖥️ User Interface
 · Multiple Themes: Light, dark, and grey themes
 · Drag-and-Drop: Load videos by dragging files onto the interface
 · Keyboard Shortcuts: Quick access to common functions
 · Context Menus: Right-click support for text fields
 · Real-Time Updates: Live preview of output settings
 
-Detailed Feature Guide
+  Detailed Feature Guide
 
-Video Loading & Preview
-
+  Video Loading & Preview
 1. Multiple Loading Methods:
    · File dialog (single or multiple files)
    · Folder loading (process all videos in a folder)
@@ -161,8 +143,7 @@ Video Loading & Preview
    · Aspect ratio information
    · Duration and frame count display
 
-Crop Tool
-
+  Crop Tool
 1. Activation: Click "Crop Tool" button or press 'C'
 2. Usage:
    · Click and drag to create initial selection
@@ -174,8 +155,7 @@ Crop Tool
    · Aspect ratio display
    · Coordinate display
 
-AI Enhancement
-
+  AI Enhancement
 1. Backend Options:
    · CPU Mode: Uses super-image library
    · GPU Mode: Uses Real-ESRGAN with Vulkan acceleration
@@ -190,8 +170,7 @@ AI Enhancement
    · Reassembles enhanced frames into video
    · Applies final encoding settings
 
-Queue System
-
+  Queue System
 1. Adding Jobs:
    · Current settings are saved with each job
    · Batch addition from folder loading
@@ -207,32 +186,26 @@ Queue System
    · Stop at any time
    · Progress tracking per job
 
-Preset System
-
+  Preset System
 1. Save Presets: Store current video, audio, and output settings
 2. Load Presets: Apply saved settings to current session
 3. Preset Files: Stored in JSON format for easy sharing/backup
 
-Configuration Files
+  Configuration Files
 
-Queue File (favencoder_queue.json)
-
-· Location: Application directory
+  Queue File (favencoder_queue.json)
 · Format: JSON with job definitions
 · Persistence: Saved automatically after queue modifications
 · Contents: All job parameters including paths, settings, and status
 
-Preset File (favencoder_presets.json)
-
-· Location: Application directory
+  Preset File (favencoder_presets.json)
 · Format: JSON with preset definitions
 · Manual editing: Possible for advanced users
 · Sharing: Can be copied between installations
 
-Codec-Specific Features
+  Codec-Specific Features
 
-Video Codecs
-
+  Video Codecs
 · FFV1: True lossless encoding with FLAC audio pairing
 · H.264/H.265: Standard compression with quality/bitrate options
 · AV1: Modern compression with SVT-AV1 and AOM implementations
@@ -240,84 +213,70 @@ Video Codecs
 · ProRes/DNxHD: Professional editing formats
 · Custom: Any FFmpeg-compatible encoder
 
-Audio Codecs
-
+  Audio Codecs
 · Lossless: FLAC, PCM (16/24/32-bit)
 · Compressed: AAC, Opus, MP3, AC3, DTS, Vorbis
 · Custom: Any FFmpeg-compatible audio encoder
 
-Resolution Options
-
-Standard Resolutions
-
+  Resolution Options
 · Original resolution
 · Standard definitions (240p to 8K)
 · Custom width/height
 · Custom single dimension (width or height)
 
-AI Enhancement Resolutions
-
+  AI Enhancement Resolutions
 · CPU: 2x, 3x, 4x using super-image
 · GPU: 2x, 3x, 4x using Real-ESRGAN
 · Model Types: Anime-optimized and general-purpose
 
-Advanced Usage
+  Advanced Usage
 
-Custom Encoder Arguments
-
+  Custom Encoder Arguments
 For advanced users who need specific FFmpeg options:
-
 1. Select "Custom (Advanced)" for video or audio codec
 2. Enter encoder name (e.g., "libx264")
 3. Add additional arguments as needed
 4. Supports copy-paste of full FFmpeg command segments
 
-Output Format Control
-
+  Output Format Control
 · Standard containers: MKV, MP4, MOV, AVI, WebM, FLV, TS
 · Custom extensions: Any FFmpeg-supported format
 · Audio-only output: When using "No video" codec
 
-Quality Settings
-
+  Quality Settings
 · CQ (Constant Quality): 0-51 scale (lower = better quality)
 · Bitrate: Kilobits per second with VBR/CBR options
 · Encoder Speed: Codec-specific presets (ultrafast to placebo)
 
-Technical Advantages
+  Technical Advantages
 
-🔄 Minimal Maintenance
-
+  🔄 Minimal Maintenance
 · Dependency Light: Only Python and FFmpeg as core dependencies
 · System Integration: Leverages system FFmpeg updates
 · No Version Lock: Works with any FFmpeg version
 · Future-Proof: Core functionality independent of library versions
 
-🏗️ Modern Architecture
-
+  🏗️ Modern Architecture
 · Type Hints: Full Python type annotations for better code maintenance
 · Data Classes: Structured configuration objects
 · Enum Usage: Type-safe configuration options
 · Separation of Concerns: Clear division between UI, processing, and configuration
 
-🚀 Performance Features
-
+  🚀 Performance Features
 · Frame Caching: LRU cache for efficient frame retrieval
 · Threaded Playback: Smooth preview during processing
 · Memory Management: Efficient handling of large videos
 · Temp File Cleanup: Automatic cleanup of intermediate files
 
-🔧 Extensibility
-
+  🔧 Extensibility
 · Modular Design: Easy to add new codecs or features
 · Plugin-like Architecture: AI backends can be added or replaced
 · Configuration Driven: Settings stored in serializable objects
 · API-like Structure: Clear interfaces between components
 
-Application States
+  Application States
 
-The application manages several states:
-
+  The application manages several states:
 · NO_VIDEO: No video loaded, waiting for input
 · VIDEO_LOADED: Video loaded, ready for editing
 · PLAYING: Video playback in progress
@@ -325,10 +284,9 @@ The application manages several states:
 · CONVERSION_PAUSED: Processing paused
 · CROP_MODE: Interactive cropping active
 
-Keyboard Shortcuts
+  Keyboard Shortcuts
 
-Navigation
-
+  Navigation
 · Space: Play/pause
 · Left Arrow: Previous frame
 · Right Arrow: Next frame
@@ -336,84 +294,71 @@ Navigation
 · E: Set end frame at current position
 · Esc: Cancel crop mode
 
-Editing
-
+  Editing
 · Ctrl+C / Cmd+C: Copy
 · Ctrl+V / Cmd+V: Paste
 · Ctrl+X / Cmd+X: Cut
 · Double-click: Full FFmpeg command view
 
-Platform Support
+  Platform Support
 
-Officially Supported
-
+  Officially Supported
 · Windows: Full support, including GPU acceleration
 · Linux: Full support, some GPU acceleration limitations
 · macOS: Basic support (CPU-only AI enhancement)
 
-Android (Termux)
-
+  Android (Termux)
 · Full core functionality support
 · CPU AI enhancement available via super-image
 · GPU acceleration is not available
 · Standard encoding fully supported
 
-ARM64 Considerations
-
-· GPU AI enhancement disabled on ARM platforms (including Termux)
+  ARM Considerations
+· GPU AI enhancement disabled on ARM platforms
 · CPU AI enhancement available via super-image
 · Standard encoding fully supported
 
-Troubleshooting
+  Troubleshooting
 
-Common Issues
-
+  Common Issues
 1. FFmpeg not found: Install FFmpeg and ensure it's in PATH
 2. GPU acceleration not working: Check Vulkan compatibility (not available on Termux)
-3. Memory issues with large videos: Use smaller segments or increase system memory
-4. AI enhancement very slow: Consider GPU acceleration or lower scale factor (on Termux, only CPU is available)
-5. Termux package issues: Always use pkg install for core packages, not pip
+3. AI enhancement very slow: Consider GPU acceleration or lower scale factor (on Termux, only CPU is available)
+4. Termux package issues: Use 'pkg install' for core packages, not pip
 
-Logging
-
+  Logging
 Enable detailed logging by setting ENABLE_LOGGING = True at the top of the favencoder.py script. Logs are written to favencoder.log.
 
-Development
+  Development
 
-Code Structure
-
+  Code Structure
 · Main Classes: VideoCropper (main app), VideoPlayer, ConversionJob
 · Data Classes: VideoSettings, AudioSettings, OutputSettings, CropRect
 · Enums: VideoCodec, AudioCodec, ResolutionMode, QualityMode
 · Utilities: LRUCache, format conversion functions
 
-Adding New Features
-
+  In case you want to add new features by yourself:
 1. New Codec: Add to appropriate Enum class and update encoder mapping
 2. New AI Backend: Implement enhancement method and add to availability check
 3. New UI Feature: Add to appropriate frame in build_ui methods
 
-Performance Tips
-
+  Performance Tips
 1. For large videos: Use frame range selection to process only needed segments
 2. For batch processing: Use queue system with consistent settings
 3. For AI enhancement: GPU acceleration provides 10-100x speed improvement (not available on Termux)
 4. For preview: Lower resolution videos load and process faster
 
-License & Attribution
+  License & Attribution
 
-This tool is built on:
-
+  This tool is built on:
 · FFmpeg: Video processing backbone
 · Real-ESRGAN: AI upscaling (when GPU acceleration used)
 · super-image: CPU-based AI upscaling
 · OpenCV: Frame extraction and processing
 · Pillow: Image manipulation
 
-Support
-
-For issues, feature requests, or contributions:
-
+  Support
+  For issues, feature requests, or contributions:
 1. Check existing documentation
 2. Review console/log output
 3. Ensure FFmpeg is properly installed
