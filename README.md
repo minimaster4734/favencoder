@@ -126,7 +126,6 @@ Key Features
 · Multiple AI Backends: CPU-based (super-image) and GPU-accelerated (Real-ESRGAN)
 · Scale Factors: 2x, 3x, and 4x upscaling
 · Model Specialization: Anime-optimized and general-purpose models
-· Automatic Backend Selection: Chooses the best available enhancement method
 
 📁 Batch Processing
 
@@ -135,14 +134,6 @@ Key Features
 · Priority Control: Reorder jobs in the queue
 · Progress Tracking: Real-time status for each job
 · Command Preview: View and edit FFmpeg commands before execution
-
-🎛️ Advanced Encoding Controls
-
-· Quality Modes: Constant Quality (CQ) or Bitrate-based encoding
-· Bitrate Types: Variable (VBR) or Constant (CBR) bitrate
-· Encoder Presets: Codec-specific speed/quality presets
-· Resolution Options: From 240p to 8K, plus AI enhancement modes
-· Frame Rate Control: Maintain original or specify custom FPS
 
 🖥️ User Interface
 
