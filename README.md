@@ -8,12 +8,12 @@ Choose the guide for your operating system (for Windows, macOS, and Linux)
 
   Core Prerequisites
 
-  · Python 3.8 or higher.
-  · FFmpeg: Must be installed on your system and available in your PATH.
+  - Python 3.8 or higher.
+  - FFmpeg: Must be installed on your system and available in your PATH.
 
 Step 1: Install the System Graphical Dependency (Linux GUI Users Only)
-  · Windows/macOS: Tkinter is included with the standard Python installer. No action needed.
-  · Linux (for GUI mode): You must install the Tk library and its Python bindings at the system level. This is a prerequisite that cannot be installed via pip.
+  - Windows/macOS: Tkinter is included with the standard Python installer. No action needed.
+  - Linux (for GUI mode): You must install the Tk library and its Python bindings at the system level. This is a prerequisite that cannot be installed via pip.
   ```
   # For Debian/Ubuntu:
   sudo apt update && sudo apt install python3-tk
