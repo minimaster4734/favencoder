@@ -2,11 +2,13 @@ FAVencoder (Frame-Accurate Video Encoder) is a comprehensive video processing to
 
 ![Screenshot 1](https://github.com/minimaster4734/favencoder/blob/main/assets/115506.webp)
 
-  Installation
+ <details>
 
-Choose the guide for your operating system (for Windows, macOS, and Linux)
+<summary>Installation</summary>
 
-  Core Prerequisites
+### Choose the guide for your operating system (for Windows, macOS, and Linux)
+
+Core Prerequisites
 
   - Python 3.8 or higher.
   - FFmpeg: Must be installed on your system and available in your PATH.
@@ -88,6 +90,9 @@ Quick Start in Termux:
 # Navigate to the directory containing favencoder.py
 python favencoder.py
 ```
+</details>
+ 
+  
 
 Key Features
 
