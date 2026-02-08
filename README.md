@@ -288,31 +288,30 @@ For advanced users who need specific FFmpeg options:
 
 <summary>Technical Advantages</summary> 
 
-  🔄 Minimal Maintenance
+🔄 Minimal Maintenance
 - Dependency Light: Only Python and FFmpeg as core dependencies
 - System Integration: Leverages system FFmpeg updates
 - No Version Lock: Works with any FFmpeg version
 - Future-Proof: Core functionality independent of library versions
 
-  🏗️ Modern Architecture
+🏗️ Modern Architecture
 - Type Hints: Full Python type annotations for better code maintenance
 - Data Classes: Structured configuration objects
 - Enum Usage: Type-safe configuration options
 - Separation of Concerns: Clear division between UI, processing, and configuration
 
-  🚀 Performance Features
+🚀 Performance Features
 - Frame Caching: LRU cache for efficient frame retrieval
 - Threaded Playback: Smooth preview during processing
 - Memory Management: Efficient handling of large videos
 - Temp File Cleanup: Automatic cleanup of intermediate files
 
-  🔧 Extensibility
+🔧 Extensibility
 - Modular Design: Easy to add new codecs or features
 - Plugin-like Architecture: AI backends can be added or replaced
 - Configuration Driven: Settings stored in serializable objects
 - API-like Structure: Clear interfaces between components
 </details>
-
 
  <details>
 
