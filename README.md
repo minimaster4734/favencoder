@@ -1,9 +1,10 @@
 ### FAVencoder
-FAVencoder (Frame-Accurate Video Encoder) is a comprehensive video processing tool that combines traditional video encoding with AI-powered enhancement capabilities. Built on Python and FFmpeg, it provides both GUI and command-line interfaces for batch processing, frame-accurate editing, and intelligent video upscaling.
+FAVencoder (Frame-Accurate Video Encoder) is a Python + FFmpeg video processing tool focused on frame-accurate editing, batch encoding, and AI-powered upscaling.
+It offers both a graphical interface and a command-line workflow, making it suitable for everything from quick edits to large batch jobs.
 
 ![Screenshot 1](https://github.com/minimaster4734/favencoder/blob/main/assets/115506.webp)
 
- <details>
+<details>
 
 <summary>Installation</summary>
 
@@ -112,10 +113,19 @@ python favencoder.py
 ```
 </details>
  
- ### Key Features
+ ### Key Features Overview
+ 
+🎯 Frame-accurate editing (exact start/end frames, frame-by-frame navigation)
+📁 Batch processing with persistent queues
+🎨 Interactive visual crop tool
+🤖 AI upscaling (CPU & GPU backends)
+🎥 Wide codec support (lossless, modern, and hardware-accelerated)
+🖥️ GUI + CLI modes
 
 ![Screenshot 2](https://github.com/minimaster4734/favencoder/blob/main/assets/120849.webp)
 
+<details>
+<summary><strong>Full Feature List</strong></summary>
   🎯 Frame-Accurate Operations
   - Precise Frame Selection: Set exact start and end frames for encoding segments
   - Frame-by-Frame Navigation: Navigate with single-frame precision
@@ -148,7 +158,6 @@ python favencoder.py
 
   🖥️ User Interface
 - Multiple Themes: Light, dark, and grey themes
-- Drag-and-Drop: Load videos by dragging files onto the interface
 - Keyboard Shortcuts: Quick access to common functions
 - Context Menus: Right-click support for text fields
 - Real-Time Updates: Live preview of output settings
@@ -250,6 +259,7 @@ Anime-optimized models
  - CPU: 2x, 3x, 4x using super-image
  - GPU: 2x, 3x, 4x using Real-ESRGAN
  - GPU Model Types: Anime-optimized and general-purpose
+ </details>
 
 <details>
 
