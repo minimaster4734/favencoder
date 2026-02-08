@@ -48,32 +48,32 @@ Step 2: Set Up an Isolated Python Environment
 All subsequent Python packages should be installed inside a virtual environment.
 
 1. Create and activate the environment:
-   ```
-   python -m venv favenv
-   # Activate it:
-   # Linux/macOS: source favenv/bin/activate
-   # Windows: favenv\Scripts\activate
-   ```
-   (Your terminal prompt should change to start with (favenv).)
+```
+python -m venv favenv
+# Activate it:
+# Linux/macOS: source favenv/bin/activate
+# Windows: favenv\Scripts\activate
+```
+(Your terminal prompt should change to start with (favenv).)
 2. Install Core Python Packages via pip:
-   With the environment active, use pip to install the latest versions.
-   ```
-   pip install opencv-python pillow numpy
-   ```
-   (Do not use sudo or system package managers for this step.)
+With the environment active, use pip to install the latest versions.
+```
+pip install opencv-python pillow numpy
+```
+(Do not use sudo for this step.)
 
 Step 3: Install Optional AI Packages (Also via pip)
 FAVencoder supports AI-powered video upscaling through two backends:
 
 · CPU Backend (Recommended for testing): Install within your active virtual environment.
-  ```
-  pip install super-image
-  ```
+```
+pip install super-image
+```
 · GPU Backend (For faster processing): The application uses Real-ESRGAN-ncnn-vulkan, a standalone executable.
-  - No manual installation is required. The program will automatically download the correct version for your operating system the first time you select a GPU AI enhancement option.
-  - Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs).
+- No manual installation is required. The program will automatically download the correct version for your operating system the first time you select a GPU AI enhancement option.
+- Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs).
 
-  Quick Start Commands
+### Quick Start Commands
 
 Once your environment is set up and activated:
 ```
@@ -102,9 +102,9 @@ pip install super-image
 ```
 *(You might need to fix dependency issues)*
 
-  Important Notes for Termux:
-  - No GPU Acceleration: The Real-ESRGAN GPU backend is not available on Android/Termux (at least not for now)
-  - Storage Access: You may need to grant Termux storage permissions (termux-setup-storage) to access video files outside its home directory.
+Important Notes for Termux:
+- No GPU Acceleration: The Real-ESRGAN GPU backend is not available on Android/Termux (at least not for now)
+- Storage Access: You may need to grant Termux storage permissions (termux-setup-storage) to access video files outside its home directory.
 
 Quick Start in Termux:
 ```
