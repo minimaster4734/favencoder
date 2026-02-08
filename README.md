@@ -115,12 +115,12 @@ python favencoder.py
  
  ### Key Features Overview
  
-🎯 Frame-accurate editing (exact start/end frames, frame-by-frame navigation)
-📁 Batch processing with persistent queues
-🎨 Interactive visual crop tool
-🤖 AI upscaling (CPU & GPU backends)
-🎥 Wide codec support (lossless, modern, and hardware-accelerated)
-🖥️ GUI + CLI modes
+- 🎯 Frame-accurate editing (exact start/end frames, frame-by-frame navigation)
+- 📁 Batch processing with persistent queues
+- 🎨 Interactive visual crop tool
+- 🤖 AI upscaling (CPU & GPU backends)
+- 🎥 Wide codec support (lossless, modern, and hardware-accelerated)
+- 🖥️ GUI + CLI modes
 
 ![Screenshot 2](https://github.com/minimaster4734/favencoder/blob/main/assets/120849.webp)
 
