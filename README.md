@@ -6,16 +6,35 @@ FAVencoder (Frame-Accurate Video Encoder) is a comprehensive video processing to
 
 <summary>Installation</summary>
 
-### Choose the guide for your operating system (for Windows, macOS, and Linux)
+### Choose the guide for your operating system
 
-Core Prerequisites
+Desktop Platforms
+- Windows: Full support, including GPU acceleration
+- Linux: Full support, with some GPU acceleration limitations
+- macOS: Basic support (CPU-only AI enhancement)
+
+Mobile / Terminal Environment
+Android (Termux):
+- Full core functionality support
+- CPU-based AI enhancement available via super-image
+- No GPU acceleration
+- Standard encoding fully supported
+
+  *ARM Considerations
+· GPU AI enhancement disabled on ARM platforms
+· CPU AI enhancement available via super-image
+· Standard encoding fully supported*
+
+### Core Prerequisites for all systems
 
   - Python 3.8 or higher.
   - FFmpeg: Must be installed on your system and available in your PATH.
 
+### - Windows/macOS: Tkinter is included with the standard Python installer. No action needed.
+
+### - Linux (for GUI mode): You must install the Tk library and its Python bindings at the system level. This is a prerequisite that cannot be installed via pip.
+
 Step 1: Install the System Graphical Dependency (Linux GUI Users Only)
-  - Windows/macOS: Tkinter is included with the standard Python installer. No action needed.
-  - Linux (for GUI mode): You must install the Tk library and its Python bindings at the system level. This is a prerequisite that cannot be installed via pip.
   ```
   # For Debian/Ubuntu:
   sudo apt update && sudo apt install python3-tk
@@ -49,8 +68,8 @@ FAVencoder supports AI-powered video upscaling through two backends:
   pip install super-image
   ```
 · GPU Backend (For faster processing): The application uses Real-ESRGAN-ncnn-vulkan, a standalone executable.
-  · No manual installation is required. The program will automatically download the correct version for your operating system the first time you select a GPU AI enhancement option.
-  · Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs).
+  - No manual installation is required. The program will automatically download the correct version for your operating system the first time you select a GPU AI enhancement option.
+  - Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs).
 
   Quick Start Commands
 
@@ -62,7 +81,7 @@ python favencoder.py
 python favencoder.py --no-gui
 ```
 
-For Android (Termux)
+### - Android (Termux)
 On Termux, all packages can be installed via the pkg manager.
 1. Install Termux and All Dependencies
 Install Termux from F-Droid. Then, install all dependencies in one step using pkg:
@@ -79,11 +98,11 @@ The only package you should install via pip is the optional CPU-based AI module.
 ```
 pip install super-image
 ```
+*(You might need to fix dependency issues)*
 
   Important Notes for Termux:
-
-· No GPU Acceleration: The Real-ESRGAN GPU backend is not available on Android/Termux.
-· Storage Access: You may need to grant Termux storage permissions (termux-setup-storage) to access video files outside its home directory.
+  - No GPU Acceleration: The Real-ESRGAN GPU backend is not available on Android/Termux (at least not for now)
+  - Storage Access: You may need to grant Termux storage permissions (termux-setup-storage) to access video files outside its home directory.
 
 Quick Start in Termux:
 ```
@@ -92,104 +111,101 @@ python favencoder.py
 ```
 </details>
  
-  
-
-Key Features
+ ### Key Features
 
 ![Screenshot 2](https://github.com/minimaster4734/favencoder/blob/main/assets/120849.webp)
 
   🎯 Frame-Accurate Operations
-· Precise Frame Selection: Set exact start and end frames for encoding segments
-· Frame-by-Frame Navigation: Navigate with single-frame precision
-· Timeline Control: Visual timeline with direct frame access
-· Frame-Specific Editing: Apply operations to specific frame ranges
+  - Precise Frame Selection: Set exact start and end frames for encoding segments
+  - Frame-by-Frame Navigation: Navigate with single-frame precision
+  - Timeline Control: Visual timeline with direct frame access
+  - Frame-Specific Editing: Apply operations to specific frame ranges
 
   🎨 Comprehensive Codec Support
-· Video Codecs: FFV1 (Lossless), H.264, H.265, AV1, VP9, ProRes, DNxHD, and hardware-accelerated options (NVENC, QSV, AMF)
-· Audio Codecs: FLAC, PCM, AAC, Opus, MP3, AC3, DTS, Vorbis
-· Custom Encoders: Advanced users can specify any FFmpeg-compatible encoder
-· Intelligent Pairing: Automatic suggestions for optimal video/audio codec combinations
+  - Video Codecs: FFV1 (Lossless), H.264, H.265, AV1, VP9, ProRes, DNxHD, and hardware-accelerated options (NVENC, QSV, AMF)
+  - Audio Codecs: FLAC, PCM, AAC, Opus, MP3, AC3, DTS, Vorbis
+  - Custom Encoders: Advanced users can specify any FFmpeg-compatible encoder
+  - Intelligent Pairing: Automatic suggestions for optimal video/audio codec combinations
 
   🔍 Visual Editing Tools
-· Interactive Crop Tool: Click-and-drag cropping with visual handles
-· Real-Time Preview: See crop adjustments immediately
-· Aspect Ratio Maintenance: Intelligent cropping that maintains video proportions
-· Crop History: Save and recall custom crop settings
+  - Interactive Crop Tool: Click-and-drag cropping with visual handles
+  - Real-Time Preview: See crop adjustments immediately
+  - Aspect Ratio Maintenance: Intelligent cropping that maintains video proportions
+  - Crop History: Save and recall custom crop settings
 
   🤖 AI-Powered Enhancement
-· Multiple AI Backends: CPU-based (super-image) and GPU-accelerated (Real-ESRGAN)
-· Scale Factors: 2x, 3x, and 4x upscaling
-· Model Specialization: Anime-optimized and general-purpose models
+  - Multiple AI Backends: CPU-based (super-image) and GPU-accelerated (Real-ESRGAN)
+  - Scale Factors: 2x, 3x, and 4x upscaling
+  - Model Specialization: Anime-optimized and general-purpose models
 
   📁 Batch Processing
-· Queue Management: Add multiple videos with consistent settings
-· Queue Persistence: Jobs saved between sessions
-· Priority Control: Reorder jobs in the queue
-· Progress Tracking: Real-time status for each job
-· Command Preview: View and edit FFmpeg commands before execution
+- Queue Management: Add multiple videos with consistent settings
+- Queue Persistence: Jobs saved between sessions
+- Priority Control: Reorder jobs in the queue
+- Progress Tracking: Real-time status for each job
+- Command Preview: View and edit FFmpeg commands before execution
 
   🖥️ User Interface
-· Multiple Themes: Light, dark, and grey themes
-· Drag-and-Drop: Load videos by dragging files onto the interface
-· Keyboard Shortcuts: Quick access to common functions
-· Context Menus: Right-click support for text fields
-· Real-Time Updates: Live preview of output settings
+  - Multiple Themes: Light, dark, and grey themes
+  - Drag-and-Drop: Load videos by dragging files onto the interface
+  - Keyboard Shortcuts: Quick access to common functions
+  - Context Menus: Right-click support for text fields
+  - Real-Time Updates: Live preview of output settings
 
-  Detailed Feature Guide
+### Detailed Feature Guide
 
   Video Loading & Preview
 1. Multiple Loading Methods:
-   · File dialog (single or multiple files)
-   · Folder loading (process all videos in a folder)
-   · Drag-and-drop onto the interface
+  - File dialog (single or multiple files)
+  - Folder loading (process all videos in a folder)
 2. Preview Features:
-   · Smooth playback with frame-accurate seeking
-   · Display of original and output resolutions
-   · Aspect ratio information
-   · Duration and frame count display
+  - Smooth playback with frame-accurate seeking
+  - Display of original and output resolutions
+  - Aspect ratio information
+  - Duration and frame count display
 
   Crop Tool
-1. Activation: Click "Crop Tool" button or press 'C'
+1. Activation: Click "Crop Tool" button
 2. Usage:
-   · Click and drag to create initial selection
-   · Resize using corner handles
-   · Move by dragging inside the selection
-   · Clear with "Clear Crop" button
+  - Click and drag to create initial selection
+  - Resize using corner handles
+  - Move by dragging inside the selection
+  - Clear with "Clear Crop" button
 3. Features:
-   · Even-dimension enforcement (required by most codecs)
-   · Aspect ratio display
-   · Coordinate display
+- Even-dimension enforcement (required by most codecs)
+- Aspect ratio display
+- Coordinate display
 
   AI Enhancement
 1. Backend Options:
-   · CPU Mode: Uses super-image library
-   · GPU Mode: Uses Real-ESRGAN with Vulkan acceleration
-   · Auto-download: GPU backend downloads automatically if not available
+ - CPU Mode: Uses super-image library
+ - GPU Mode: Uses Real-ESRGAN with Vulkan acceleration
+ - Auto-download: GPU backend downloads automatically if not available
 2. Scale Options:
-   · 2x, 3x, 4x upscaling
-   · Anime-optimized models
-   · General-purpose models (4x only)
+ - 2x, 3x, 4x upscaling
+Anime-optimized models
+ - General-purpose models (4x only)
 3. Processing:
-   · Extracts frames to temporary directory
-   · Processes each frame with selected AI model
-   · Reassembles enhanced frames into video
-   · Applies final encoding settings
+ - Extracts frames to temporary directory
+ - Processes each frame with selected AI model
+ - Reassembles enhanced frames into video
+ - Applies final encoding settings
 
   Queue System
 1. Adding Jobs:
-   · Current settings are saved with each job
-   · Batch addition from folder loading
-   · Individual job editing
+ - Current settings are saved with each job
+ - Batch addition from folder loading
+ - Individual job editing
 2. Queue Management:
-   · Reorder jobs with up/down buttons
-   · Remove individual jobs
-   · Clear entire queue
-   · Save/load queue between sessions
+ - Reorder jobs with up/down buttons
+ - Remove individual jobs
+ - Clear entire queue
+ - Save/load queue between sessions
 3. Processing:
-   · Sequential job processing
-   · Pause/resume support
-   · Stop at any time
-   · Progress tracking per job
+  - Sequential job processing
+  - Pause/resume support
+  - Stop at any time
+  - Progress tracking per job
 
   Preset System
 1. Save Presets: Store current video, audio, and output settings
@@ -199,42 +215,44 @@ Key Features
   Configuration Files
 
   Queue File (favencoder_queue.json)
-· Format: JSON with job definitions
-· Persistence: Saved automatically after queue modifications
-· Contents: All job parameters including paths, settings, and status
+ - Format: JSON with job definitions
+ - Persistence: Saved automatically after queue modifications
+ - Contents: All job parameters including paths, settings, and status
 
   Preset File (favencoder_presets.json)
-· Format: JSON with preset definitions
-· Manual editing: Possible for advanced users
-· Sharing: Can be copied between installations
+ - Format: JSON with preset definitions
+ - Manual editing: Possible for advanced users
+ - Sharing: Can be copied between installations
 
   Codec-Specific Features
 
   Video Codecs
-· FFV1: True lossless encoding with FLAC audio pairing
-· H.264/H.265: Standard compression with quality/bitrate options
-· AV1: Modern compression with SVT-AV1 and AOM implementations
-· Hardware Accelerated: NVENC (NVIDIA), QSV (Intel), AMF (AMD)
-· ProRes/DNxHD: Professional editing formats
-· Custom: Any FFmpeg-compatible encoder
+ - FFV1: True lossless encoding with FLAC audio pairing
+ - H.264/H.265: Standard compression with quality/bitrate options
+ - AV1: Modern compression with SVT-AV1 and AOM implementations
+ - Hardware Accelerated: NVENC (NVIDIA), QSV (Intel), AMF (AMD)
+ - ProRes/DNxHD: Professional editing formats
+ - Custom: Any FFmpeg-compatible encoder
 
   Audio Codecs
-· Lossless: FLAC, PCM (16/24/32-bit)
-· Compressed: AAC, Opus, MP3, AC3, DTS, Vorbis
-· Custom: Any FFmpeg-compatible audio encoder
+ - Lossless: FLAC, PCM (16/24/32-bit)
+ - Lossy: AAC, Opus, MP3, AC3, DTS, Vorbis
+ - Custom: Any FFmpeg-compatible audio encoder
 
   Resolution Options
-· Original resolution
-· Standard definitions (240p to 8K)
-· Custom width/height
-· Custom single dimension (width or height)
+ - Original resolution
+ - Standard definitions (240p to 8K)
+ - Custom width/height
+ - Custom single dimension (width or height)
 
   AI Enhancement Resolutions
-· CPU: 2x, 3x, 4x using super-image
-· GPU: 2x, 3x, 4x using Real-ESRGAN
-· Model Types: Anime-optimized and general-purpose
+ - CPU: 2x, 3x, 4x using super-image
+ - GPU: 2x, 3x, 4x using Real-ESRGAN
+ - GPU Model Types: Anime-optimized and general-purpose
 
-  Advanced Usage
+<details>
+
+<summary>Advanced Usage</summary>
 
   Custom Encoder Arguments
 For advanced users who need specific FFmpeg options:
@@ -252,8 +270,11 @@ For advanced users who need specific FFmpeg options:
 · CQ (Constant Quality): 0-51 scale (lower = better quality)
 · Bitrate: Kilobits per second with VBR/CBR options
 · Encoder Speed: Codec-specific presets (ultrafast to placebo)
+</details>
 
-  Technical Advantages
+<details>
+
+<summary>Technical Advantages</summary> 
 
   🔄 Minimal Maintenance
 · Dependency Light: Only Python and FFmpeg as core dependencies
@@ -278,52 +299,12 @@ For advanced users who need specific FFmpeg options:
 · Plugin-like Architecture: AI backends can be added or replaced
 · Configuration Driven: Settings stored in serializable objects
 · API-like Structure: Clear interfaces between components
+</details>
 
-  Application States
 
-  The application manages several states:
-· NO_VIDEO: No video loaded, waiting for input
-· VIDEO_LOADED: Video loaded, ready for editing
-· PLAYING: Video playback in progress
-· CONVERTING: Encoding/processing active
-· CONVERSION_PAUSED: Processing paused
-· CROP_MODE: Interactive cropping active
+ <details>
 
-  Keyboard Shortcuts
-
-  Navigation
-· Space: Play/pause
-· Left Arrow: Previous frame
-· Right Arrow: Next frame
-· S: Set start frame at current position
-· E: Set end frame at current position
-· Esc: Cancel crop mode
-
-  Editing
-· Ctrl+C / Cmd+C: Copy
-· Ctrl+V / Cmd+V: Paste
-· Ctrl+X / Cmd+X: Cut
-· Double-click: Full FFmpeg command view
-
-  Platform Support
-
-  Officially Supported
-· Windows: Full support, including GPU acceleration
-· Linux: Full support, some GPU acceleration limitations
-· macOS: Basic support (CPU-only AI enhancement)
-
-  Android (Termux)
-· Full core functionality support
-· CPU AI enhancement available via super-image
-· GPU acceleration is not available
-· Standard encoding fully supported
-
-  ARM Considerations
-· GPU AI enhancement disabled on ARM platforms
-· CPU AI enhancement available via super-image
-· Standard encoding fully supported
-
-  Troubleshooting
+<summary>Troubleshooting</summary> 
 
   Common Issues
 1. FFmpeg not found: Install FFmpeg and ensure it's in PATH
@@ -333,8 +314,12 @@ For advanced users who need specific FFmpeg options:
 
   Logging
 Enable detailed logging by setting ENABLE_LOGGING = True at the top of the favencoder.py script. Logs are written to favencoder.log.
+</details>
 
-  Development
+ 
+ <details>
+
+<summary>Development Notes</summary>
 
   Code Structure
 · Main Classes: VideoCropper (main app), VideoPlayer, ConversionJob
@@ -369,3 +354,5 @@ Enable detailed logging by setting ENABLE_LOGGING = True at the top of the faven
 3. Ensure FFmpeg is properly installed
 4. Test with a small video file first
 5. For Termux issues: Ensure all packages were installed via pkg as instructed
+</details>
+
