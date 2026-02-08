@@ -274,14 +274,14 @@ For advanced users who need specific FFmpeg options:
 4. Supports copy-paste of full FFmpeg command segments
 
   Output Format Control
-· Standard containers: MKV, MP4, MOV, AVI, WebM, FLV, TS
-· Custom extensions: Any FFmpeg-supported format
-· Audio-only output: When using "No video" codec
+- Standard containers: MKV, MP4, MOV, AVI, WebM, FLV, TS
+- Custom extensions: Any FFmpeg-supported format
+- Audio-only output: When using "No video" codec
 
   Quality Settings
-· CQ (Constant Quality): 0-51 scale (lower = better quality)
-· Bitrate: Kilobits per second with VBR/CBR options
-· Encoder Speed: Codec-specific presets (ultrafast to placebo)
+- CQ (Constant Quality): 0-51 scale (lower = better quality)
+- Bitrate: Kilobits per second with VBR/CBR options
+- Encoder Speed: Codec-specific presets (ultrafast to placebo)
 </details>
 
 <details>
@@ -289,28 +289,28 @@ For advanced users who need specific FFmpeg options:
 <summary>Technical Advantages</summary> 
 
   🔄 Minimal Maintenance
-· Dependency Light: Only Python and FFmpeg as core dependencies
-· System Integration: Leverages system FFmpeg updates
-· No Version Lock: Works with any FFmpeg version
-· Future-Proof: Core functionality independent of library versions
+- Dependency Light: Only Python and FFmpeg as core dependencies
+- System Integration: Leverages system FFmpeg updates
+- No Version Lock: Works with any FFmpeg version
+- Future-Proof: Core functionality independent of library versions
 
   🏗️ Modern Architecture
-· Type Hints: Full Python type annotations for better code maintenance
-· Data Classes: Structured configuration objects
-· Enum Usage: Type-safe configuration options
-· Separation of Concerns: Clear division between UI, processing, and configuration
+- Type Hints: Full Python type annotations for better code maintenance
+- Data Classes: Structured configuration objects
+- Enum Usage: Type-safe configuration options
+- Separation of Concerns: Clear division between UI, processing, and configuration
 
   🚀 Performance Features
-· Frame Caching: LRU cache for efficient frame retrieval
-· Threaded Playback: Smooth preview during processing
-· Memory Management: Efficient handling of large videos
-· Temp File Cleanup: Automatic cleanup of intermediate files
+- Frame Caching: LRU cache for efficient frame retrieval
+- Threaded Playback: Smooth preview during processing
+- Memory Management: Efficient handling of large videos
+- Temp File Cleanup: Automatic cleanup of intermediate files
 
   🔧 Extensibility
-· Modular Design: Easy to add new codecs or features
-· Plugin-like Architecture: AI backends can be added or replaced
-· Configuration Driven: Settings stored in serializable objects
-· API-like Structure: Clear interfaces between components
+- Modular Design: Easy to add new codecs or features
+- Plugin-like Architecture: AI backends can be added or replaced
+- Configuration Driven: Settings stored in serializable objects
+- API-like Structure: Clear interfaces between components
 </details>
 
 
@@ -334,10 +334,10 @@ Enable detailed logging by setting ENABLE_LOGGING = True at the top of the faven
 <summary>Development Notes</summary>
 
   Code Structure
-· Main Classes: VideoCropper (main app), VideoPlayer, ConversionJob
-· Data Classes: VideoSettings, AudioSettings, OutputSettings, CropRect
-· Enums: VideoCodec, AudioCodec, ResolutionMode, QualityMode
-· Utilities: LRUCache, format conversion functions
+- Main Classes: VideoCropper (main app), VideoPlayer, ConversionJob
+- Data Classes: VideoSettings, AudioSettings, OutputSettings, CropRect
+- Enums: VideoCodec, AudioCodec, ResolutionMode, QualityMode
+- Utilities: LRUCache, format conversion functions
 
   In case you want to add new features by yourself:
 1. New Codec: Add to appropriate Enum class and update encoder mapping
@@ -353,11 +353,11 @@ Enable detailed logging by setting ENABLE_LOGGING = True at the top of the faven
   License & Attribution
 
   This tool is built on:
-· FFmpeg: Video processing backbone
-· Real-ESRGAN: AI upscaling (when GPU acceleration used)
-· super-image: CPU-based AI upscaling
-· OpenCV: Frame extraction and processing
-· Pillow: Image manipulation
+- FFmpeg: Video processing backbone
+- Real-ESRGAN: AI upscaling (when GPU acceleration used)
+- super-image: CPU-based AI upscaling
+- OpenCV: Frame extraction and processing
+- Pillow: Image manipulation
 
   Support
   For issues, feature requests, or contributions:
