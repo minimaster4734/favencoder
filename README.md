@@ -146,11 +146,11 @@ python favencoder.py
 - Command Preview: View and edit FFmpeg commands before execution
 
   🖥️ User Interface
-  - Multiple Themes: Light, dark, and grey themes
-  - Drag-and-Drop: Load videos by dragging files onto the interface
-  - Keyboard Shortcuts: Quick access to common functions
-  - Context Menus: Right-click support for text fields
-  - Real-Time Updates: Live preview of output settings
+- Multiple Themes: Light, dark, and grey themes
+- Drag-and-Drop: Load videos by dragging files onto the interface
+- Keyboard Shortcuts: Quick access to common functions
+- Context Menus: Right-click support for text fields
+- Real-Time Updates: Live preview of output settings
 
 ### Detailed Feature Guide
 
