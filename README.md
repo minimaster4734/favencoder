@@ -125,7 +125,7 @@ python favencoder.py
 ![Screenshot 2](https://github.com/minimaster4734/favencoder/blob/main/assets/120849.webp)
 
 <details>
-<summary><strong>Full Feature List</strong></summary>
+<summary>Full Feature List</summary>
   🎯 Frame-Accurate Operations
   - Precise Frame Selection: Set exact start and end frames for encoding segments
   - Frame-by-Frame Navigation: Navigate with single-frame precision
