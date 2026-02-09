@@ -1,6 +1,7 @@
 ### FAVencoder
 FAVencoder (Frame-Accurate Video Encoder) is a Python + FFmpeg video processing tool focused on frame-accurate editing, batch encoding, and AI-powered upscaling.
-It offers both a graphical interface and a command-line workflow, making it suitable for everything from quick edits to large batch jobs.
+It offers both a graphical interface and a command-line workflow, making it suitable for everything from quick edits to large batch jobs. 
+Runs on Windows, Linux, MacOS and Android.
 
 ![Screenshot 1](https://github.com/minimaster4734/favencoder/blob/main/assets/115506.webp)
 
