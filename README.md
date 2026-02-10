@@ -97,8 +97,8 @@ pkg update && pkg upgrade -y
 pkg install python ffmpeg python-tkinter python-numpy python-pillow python-opencv
 ```
 
-2. Install the AI Package (CPU Only)
-The only package you should install via pip is the optional CPU-based AI module. Install it globally.
+2. (Optional) Install the AI Package (CPU Only)
+Install it globally.
 ```
 pip install super-image
 ```
