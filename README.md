@@ -25,7 +25,7 @@ Android (Termux):
 - Standard encoding fully supported
 
   *ARM Considerations
-· GPU AI enhancement disabled on ARM platforms
+· GPU AI enhancement disabled on ARM/ platforms
 · CPU AI enhancement available via super-image
 · Standard encoding fully supported*
 
@@ -62,7 +62,6 @@ With the environment active, use pip to install the latest versions.
 ```
 pip install opencv-python pillow numpy
 ```
-(Do not use sudo for this step.)
 
 Step 3: Install Optional AI Packages (Also via pip)
 FAVencoder supports AI-powered video upscaling through two backends:
@@ -81,7 +80,7 @@ pip install super-image
 - **x86 (64‑bit)**: Full support, including GPU acceleration.
 - **ARM64**:  
   - Full core functionality.
-  - GPU AI acceleration only if Vulkan drivers are available (e.g., some Linux ARM64 builds).  
+  - GPU AI acceleration not currently available.
   - CPU AI enhancement works via `super-image`.
 - **RISC‑V 64**:  
   - Core functionality is supported **when the required Python packages are installed**.  
