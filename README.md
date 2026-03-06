@@ -2,7 +2,7 @@
 FAVencoder (Frame-Accurate Video Encoder) is a Python + FFmpeg video processing tool focused on frame-accurate editing, batch encoding, and AI-powered upscaling.
 It offers both a graphical interface and a command-line workflow, making it suitable for everything from quick edits to large batch jobs. 
 
-Runs on Windows, Linux, MacOS and Android.
+Runs on Windows, Linux, MacOS and Android. Works on x86, ARM, and RISC‑V architectures (see platform‑specific notes for installation details).
 
 ![Screenshot 1](https://github.com/minimaster4734/favencoder/blob/main/assets/115506.webp)
 
@@ -74,6 +74,22 @@ pip install super-image
 · GPU Backend (For faster processing): The application uses Real-ESRGAN-ncnn-vulkan, a standalone executable.
 - No manual installation is required. The program will automatically download the correct version for your operating system the first time you select a GPU AI enhancement option.
 - Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs).
+
+ 
+ ### Architecture Support
+   
+- **x86 (64‑bit)**: Full support, including GPU acceleration.
+- **ARM64**:  
+  - Full core functionality.
+  - GPU AI acceleration only if Vulkan drivers are available (e.g., some Linux ARM64 builds).  
+  - CPU AI enhancement works via `super-image`.
+- **RISC‑V 64**:  
+  - Core functionality is supported **when the required Python packages are installed**.  
+  - Recommended installation methods:  
+    * Use **conda‑forge** (which provides pre‑built `riscv64` packages).  
+    * Or install from source / use wheels from the [RISE project](https://github.com/riscv-forks/riscv-wheels).  
+  - GPU acceleration is **not available**; CPU AI enhancement may work if `super-image` is installable.
+
 
 ### Quick Start Commands
 
