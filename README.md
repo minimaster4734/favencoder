@@ -132,49 +132,49 @@ python favencoder.py
  
  ### Key Features Overview
  
-- 🎯 Frame-accurate editing (exact start/end frames, frame-by-frame navigation)
-- 📁 Batch processing with persistent queues
-- 🎨 Interactive visual crop tool
-- 🤖 AI upscaling (CPU & GPU backends)
-- 🎥 Wide codec support (lossless, modern, and hardware-accelerated)
-- 🖥️ GUI + CLI modes
+- Frame-accurate editing (exact start/end frames, frame-by-frame navigation)
+- Batch processing with persistent queues
+- Interactive visual crop tool
+- AI upscaling (CPU & GPU backends)
+- Wide codec support (lossless, modern, and hardware-accelerated)
+- GUI + CLI modes
 
 ![Screenshot 2](https://github.com/minimaster4734/favencoder/blob/main/assets/120849.webp)
 
 <details>
 <summary>Full Feature List</summary>
  
-  🎯 Frame-Accurate Operations
+Frame-Accurate Operations
   - Precise Frame Selection: Set exact start and end frames for encoding segments
   - Frame-by-Frame Navigation: Navigate with single-frame precision
   - Timeline Control: Visual timeline with direct frame access
   - Frame-Specific Editing: Apply operations to specific frame ranges
 
-  🎨 Comprehensive Codec Support
+Comprehensive Codec Support
   - Video Codecs: FFV1 (Lossless), H.264, H.265, AV1, VP9, ProRes, DNxHD, and hardware-accelerated options (NVENC, QSV, AMF)
   - Audio Codecs: FLAC, PCM, AAC, Opus, MP3, AC3, DTS, Vorbis
   - Custom Encoders: Advanced users can specify any FFmpeg-compatible encoder
   - Intelligent Pairing: Automatic suggestions for optimal video/audio codec combinations
 
-  🔍 Visual Editing Tools
+Visual Editing Tools
   - Interactive Crop Tool: Click-and-drag cropping with visual handles
   - Real-Time Preview: See crop adjustments immediately
   - Aspect Ratio Maintenance: Intelligent cropping that maintains video proportions
   - Crop History: Save and recall custom crop settings
 
-  🤖 AI-Powered Enhancement
+AI-Powered Enhancement
   - Multiple AI Backends: CPU-based (super-image) and GPU-accelerated (Real-ESRGAN)
   - Scale Factors: 2x, 3x, and 4x upscaling
   - Model Specialization: Anime-optimized and general-purpose models
 
-  📁 Batch Processing
+Batch Processing
 - Queue Management: Add multiple videos with consistent settings
 - Queue Persistence: Jobs saved between sessions
 - Priority Control: Reorder jobs in the queue
 - Progress Tracking: Real-time status for each job
 - Command Preview: View and edit FFmpeg commands before execution
 
-  🖥️ User Interface
+User Interface
 - Multiple Themes: Light, dark, and grey themes
 - Keyboard Shortcuts: Quick access to common functions
 - Context Menus: Right-click support for text fields
@@ -305,25 +305,25 @@ For advanced users who need specific FFmpeg options:
 
 <summary>Technical Advantages</summary> 
 
-🔄 Minimal Maintenance
+Minimal Maintenance
 - Dependency Light: Only Python and FFmpeg as core dependencies
 - System Integration: Leverages system FFmpeg updates
 - No Version Lock: Works with any FFmpeg version
 - Future-Proof: Core functionality independent of library versions
 
-🏗️ Modern Architecture
+Modern Architecture
 - Type Hints: Full Python type annotations for better code maintenance
 - Data Classes: Structured configuration objects
 - Enum Usage: Type-safe configuration options
 - Separation of Concerns: Clear division between UI, processing, and configuration
 
-🚀 Performance Features
+Performance Features
 - Frame Caching: LRU cache for efficient frame retrieval
 - Threaded Playback: Smooth preview during processing
 - Memory Management: Efficient handling of large videos
 - Temp File Cleanup: Automatic cleanup of intermediate files
 
-🔧 Extensibility
+Extensibility
 - Modular Design: Easy to add new codecs or features
 - Plugin-like Architecture: AI backends can be added or replaced
 - Configuration Driven: Settings stored in serializable objects
