@@ -4,7 +4,7 @@ It offers both a graphical interface and a command-line workflow, making it suit
 
 Runs on Windows, Linux, MacOS and Android. Works on x86, ARM, and RISC‑V architectures (see "Installation > Architecture Support" notes for more details).
 
-![Screenshot 1](https://github.com/minimaster4734/favencoder/blob/main/assets/115506.webp)
+![Screenshot 1](https://github.com/minimaster4734/favencoder/blob/main/assets/163798.png)
 
 <details>
 
