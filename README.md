@@ -20,13 +20,13 @@ Desktop Platforms
 Mobile / Terminal Environment
 Android (Termux):
 - Full core functionality support
-- CPU-based AI enhancement available via super-image
+- CPU-based AI enhancement available via Waifu2x
 - No GPU acceleration
 - Standard encoding fully supported
 
   *ARM Considerations
-· GPU AI enhancement disabled on ARM/ platforms
-· CPU AI enhancement available via super-image
+· GPU AI enhancement disabled on ARM platforms
+· CPU AI enhancement available via Waifu2x
 · Standard encoding fully supported*
 
 ### Core Prerequisites for all systems
@@ -60,7 +60,7 @@ python -m venv favenv
 2. Install Core Python Packages via pip:
 With the environment active, use pip to install the latest versions.
 ```
-pip install opencv-python pillow numpy
+pip install opencv-python pillow numpy requests
 ```
 
 Step 3: Install Optional AI Packages (Also via pip)
@@ -68,11 +68,11 @@ FAVencoder supports AI-powered video upscaling through two backends:
 
 · CPU Backend (Recommended for testing): Install within your active virtual environment.
 ```
-pip install super-image
+pip install waifu2x
 ```
 · GPU Backend (For faster processing): The application uses Real-ESRGAN-ncnn-vulkan, a standalone executable.
 - No manual installation is required. The program will automatically download the correct version for your operating system the first time you select a GPU AI enhancement option.
-- Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs).
+- Requirement: A Vulkan-compatible GPU and drivers. This backend is disabled on ARM-based systems (e.g., Raspberry Pi, Apple Silicon Macs, etc).
 
  
  ### Architecture Support
@@ -81,13 +81,13 @@ pip install super-image
 - **ARM64**:  
   - Full core functionality.
   - GPU AI acceleration not currently available.
-  - CPU AI enhancement works via `super-image`.
+  - CPU AI enhancement works via `waifu2x`.
 - **RISC‑V 64**:  
   - Core functionality is supported **when the required Python packages are installed**.  
   - Recommended installation methods:  
     * Use **conda‑forge** (which provides pre‑built `riscv64` packages).  
     * Or install from source / use wheels from the [RISE project](https://github.com/riscv-forks/riscv-wheels).  
-  - GPU acceleration is **not available**; CPU AI enhancement may work if `super-image` is installable.
+  - GPU acceleration is **not available**; CPU AI enhancement may work if `waifu2x` is installable.
 
 
 ### Quick Start Commands
@@ -109,13 +109,13 @@ Install Termux from F-Droid. Then, install all dependencies in one step using pk
 pkg update && pkg upgrade -y
 
 # Install Python, FFmpeg, Tkinter, and all required Python libraries
-pkg install python ffmpeg python-tkinter python-numpy python-pillow python-opencv
+pkg install python ffmpeg python-tkinter python-numpy python-pillow python-opencv && pip install requests
 ```
 
-2. (Optional) Install the AI Package (CPU Only)
+2. (Optional) Install the AI Package
 Install it globally.
 ```
-pip install super-image
+pip install waifu2x
 ```
 *(You might need to fix dependency issues)*
 
@@ -163,7 +163,7 @@ Visual Editing Tools
   - Crop History: Save and recall custom crop settings
 
 AI-Powered Enhancement
-  - Multiple AI Backends: CPU-based (super-image) and GPU-accelerated (Real-ESRGAN)
+  - Multiple AI Backends: CPU-based (waifu2x) and GPU-accelerated (Real-ESRGAN/waifu2x)
   - Scale Factors: 2x, 3x, and 4x upscaling
   - Model Specialization: Anime-optimized and general-purpose models
 
@@ -206,8 +206,8 @@ User Interface
 
   AI Enhancement
 1. Backend Options:
- - CPU Mode: Uses super-image library
- - GPU Mode: Uses Real-ESRGAN with Vulkan acceleration
+ - CPU Mode: Uses waifu2x library
+ - GPU Mode: Uses Real-ESRGAN / waifu2x with Vulkan acceleration
  - Auto-download: GPU backend downloads automatically if not available
 2. Scale Options:
  - 2x, 3x, 4x upscaling
@@ -274,8 +274,8 @@ Anime-optimized models
  - Custom single dimension (width or height)
 
   AI Enhancement Resolutions
- - CPU: 2x, 3x, 4x using super-image
- - GPU: 2x, 3x, 4x using Real-ESRGAN
+ - CPU: 2x, 3x, 4x using waifu2x
+ - GPU: 2x, 3x, 4x using Real-ESRGAN / wiafu2x
  - GPU Model Types: Anime-optimized and general-purpose
  </details>
 
@@ -371,7 +371,7 @@ Enable detailed logging by setting ENABLE_LOGGING = True at the top of the faven
   This tool is built on:
 - FFmpeg: Video processing backbone
 - Real-ESRGAN: AI upscaling (when GPU acceleration used)
-- super-image: CPU-based AI upscaling
+- waifu2x: CPU-based AI upscaling
 - OpenCV: Frame extraction and processing
 - Pillow: Image manipulation
 
