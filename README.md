@@ -78,7 +78,8 @@ pkg install python ffmpeg python-tkinter python-numpy python-pillow python-openc
 # Launch the graphical interface (default)
 python favencoder.py OR python3 favencoder.py
 # Process jobs in the queue without the GUI
-python favencoder.py --no-gui OR python3 favencoder.py --no-gui
+python favencoder.py --no-gui OR python3 favencoder.py --no-
+```
 
 </details>
 
