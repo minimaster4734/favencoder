@@ -14,8 +14,9 @@ Runs on Windows, Linux, macOS, and Android. Works on x86, ARM, and RISC-V archit
 - Python 3.8 or higher
 - FFmpeg: must be installed on your system and available in your PATH
 
-**Windows/macOS:** Tkinter is included with the standard Python installer — no action needed.
-**Linux (GUI mode only):** the Tk library and its Python bindings must be installed at the system level; this can't be installed via pip.
+### Windows/macOS: Tkinter is included with the standard Python installer — no action needed.
+
+### Linux (GUI mode only): the Tk library and its Python bindings must be installed at the system level; this can't be installed via pip.
 
 Step 1: Install the System Graphical Dependency (Linux GUI users only)
 ```
@@ -48,21 +49,6 @@ FAVencoder supports AI-powered video upscaling through two backends:
 - **CPU backend:** Uses waifu2x, inside your active virtual environment.
 - **GPU backend:** uses Real-ESRGAN-ncnn-vulkan, a standalone executable. No manual install needed — it's downloaded automatically the first time you select a GPU AI enhancement option. Requires a Vulkan-compatible GPU and drivers; unavailable on ARM (see Architecture Support below).
 
-### Architecture Support
-
-- **x86 (64-bit):** Full support, including GPU acceleration.
-- **ARM64** (Raspberry Pi, Apple Silicon, Android/Termux): Full core functionality and CPU AI enhancement via `waifu2x`. GPU AI acceleration is not available.
-- **RISC-V 64:** Core functionality works once the required Python packages are installed — use **conda-forge** (pre-built `riscv64` packages) or wheels from the [RISE project](https://github.com/riscv-forks/riscv-wheels). GPU acceleration is unavailable; CPU AI enhancement may work if `waifu2x` installs.
-
-### Quick Start
-```
-# Launch the graphical interface (default)
-python favencoder.py
-# Process jobs in the queue without the GUI
-python favencoder.py --no-gui
-```
-Same commands on Android/Termux — just `cd` into the folder containing `favencoder.py` first.
-
 ### Android (Termux) Setup
 
 Install [Termux from F-Droid](https://f-droid.org/), then install everything in one step with `pkg`:
@@ -76,8 +62,23 @@ pkg install python ffmpeg python-tkinter python-numpy python-pillow python-openc
 (Optional) Install the CPU AI package globally: `pip install waifu2x` (you might need to fix dependency issues).
 
 **Notes for Termux:**
-- No GPU acceleration (see Architecture Support above).
+- No GPU acceleration for now (see Architecture Support above).
 - You may need to grant storage permissions (`termux-setup-storage`) to access video files outside Termux's home directory.
+
+### Architecture Support
+
+- **x86 (64-bit):** Full support, including GPU acceleration.
+- **ARM64** (Raspberry Pi, Apple Silicon, Android/Termux): Full core functionality and CPU AI enhancement via `waifu2x`. GPU AI acceleration is not available.
+- **RISC-V 64:** Core functionality works once the required Python packages are installed — use **conda-forge** (pre-built `riscv64` packages) or wheels from the [RISE project](https://github.com/riscv-forks/riscv-wheels). GPU acceleration is unavailable; CPU AI enhancement may work if `waifu2x` installs.
+
+
+### Quick Start
+```
+'cd' into the folder where favencoder.py is.
+# Launch the graphical interface (default)
+python favencoder.py OR python3 favencoder.py
+# Process jobs in the queue without the GUI
+python favencoder.py --no-gui OR python3 favencoder.py --no-gui
 
 </details>
 
